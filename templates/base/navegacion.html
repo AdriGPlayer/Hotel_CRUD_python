@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel alura</title>
+    <link rel="stylesheet" href="static/menu-principal.css" />
+    <link rel="stylesheet" href="static/navegacion.css" />
+  </head>
+
+  <body>
+    <nav class="tab-link">
+      <a href="/menu_principal">home</a>
+      <a href="/add_reservacion">Registrar reservación</a>
+      <a href="/mostrar_tabla_reservas">Tabla de reservas</a>
+      <a href="/mostrar_tabla_huesped">Tabla de huespedes</a>
+
+      <hr />
+    </nav>
+
+    {% block contenido%} {% endblock %}
+  </body>
+</html>

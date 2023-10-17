@@ -1,0 +1,38 @@
+<div class="container_reservacion">
+  <div class="nav">
+    {% extends 'base/navegacion.html' %} {% block contenido %}
+  </div>
+
+  <div class="tabla">
+    <div class="col-md-7">
+      <table class="">
+        <thead>
+          <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Fecha nacimiento</td>
+            <td>Nacionalidad</td>
+            <td>Telefono</td>
+            <td>Operaciones</td>
+          </tr>
+        </thead>
+        <tbody>
+          {%for huesped in huespedes:%}
+          <tr>
+            <td>{{huesped.1}}</td>
+            <td>{{huesped.2}}</td>
+            <td>{{huesped.3}}</td>
+            <td>{{huesped.4}}</td>
+            <td>{{ huesped.5 }}</td>
+            <td>
+              <a href="/edit/{{huesped.0}}" class="btn btn-secondary">Editar</a>
+            </td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

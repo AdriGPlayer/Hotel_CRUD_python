@@ -1,0 +1,43 @@
+.form {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .menu-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 40%; /* Ancho del contenedor del formulario */
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="tel"],
+  select {
+    width: 100%; /* Los campos ocuparán el ancho completo del contenedor */
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }

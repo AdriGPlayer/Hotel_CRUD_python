@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar contacto</title>
+    <link rel="stylesheet" href="/static/editar-reserva.css">
+</head>
+<body>
+    
+
+  <div class="form">
+    <div class="menu">
+      <div class="menu-content">
+        <div class="welcome">
+          <p>Editar reservacion</p>
+        </div>
+        <div class="description">
+          <h3>Por favor ingrese los datos de la reservacion</h3>
+          <form action="/update/{{reserva.0}}" method="post">
+            <label for="fecha-entrada">Fecha de Entrada:</label>
+            <input
+              type="date"
+              id="fecha-entrada"
+              name="fecha_entrada"
+              required
+            />
+
+            <label for="fecha-salida">Fecha de Salida:</label>
+            <input
+              type="date"
+              id="fecha-salida"
+              name="fecha_salida"
+              required
+            />
+
+            <label for="metodo-pago">Método de Pago:</label>
+            <select id="metodo-pago" name="metodo_pago" required>
+              <option value="tarjeta-credito">Tarjeta de Crédito</option>
+              <option value="tarjeta-debito">Tarjeta de Débito</option>
+              <option value="efectivo">Efectivo</option></select
+            >
+            <h3>Por favor ingrese los datos del huesped</h3>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="apellido">Apellido:</label>
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              required
+            />
+
+            <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+            <input
+              type="date"
+              id="fecha-nacimiento"
+              name="fecha_nacimiento"
+              required
+            /><br /><br />
+
+            <label for="nacionalidad">Nacionalidad:</label>
+            <select id="nacionalidad" name="nacionalidad" required>
+              <option value="argentina">Argentina</option>
+              <option value="espanola">Española</option>
+              <option value="mexicana">Mexicana</option>
+              <!-- Agrega más nacionalidades según tus necesidades --></select
+            ><br /><br />
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" /><br /><br />
+
+            <button type="submit">Editar reservacion</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+

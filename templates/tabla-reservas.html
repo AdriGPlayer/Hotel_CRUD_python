@@ -1,0 +1,41 @@
+<div class="container_reservacion">
+  <div class="nav">
+    {% extends 'base/navegacion.html' %} {% block contenido %}
+  </div>
+
+  <div class="tabla">
+    <div class="col-md-7">
+      <table class="">
+        <thead>
+          <tr>
+            <td>Numero de reservacion</td>
+            <td>Fecha de entrada</td>
+            <td>Fecha de salida</td>
+            <td>Valor de reservacion</td>
+            <td>Forma de pago</td>
+            <td>Operaciones</td>
+          </tr>
+        </thead>
+        <tbody>
+          {%for reserva in reservaciones:%}
+          <tr>
+            <td>{{ reserva.0 }}</td>
+            <td>{{reserva.1}}</td>
+            <td>{{reserva.2}}</td>
+            <td>$ {{reserva.3}}</td>
+            <td>{{reserva.4}}</td>
+            <td>
+              <a href="/edit/{{reserva.0}}" class="btn btn-secondary">Editar</a>
+              <a href="/delete/{{reserva.0}}" class="btn btn-danger"
+                >Eliminar</a
+              >
+            </td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
